@@ -17,7 +17,7 @@ Stack::~Stack()
     delete head;
 }
 
-//Pushes a new node onto the stack. It is a FIFO data structure so it pushed the
+//Pushes a new node onto the stack. It is a LIFO data structure so it pushed the
 //new node onto the front of the stack, and increments the length by 1.
 void Stack::push(int n)
 {
@@ -57,7 +57,7 @@ void Stack::printStack()
 }
 
 //returns the data value stored in the node that is popped off the stack.
-//Since the stack is FIFO the the head is always popped off the stack.
+//Since the stack is LIFO the the head is always popped off the stack.
 int Stack::pop()
 {
     if (this->head != NULL)
