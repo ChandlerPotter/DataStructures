@@ -1,14 +1,18 @@
 #include "node.h"
+#include "queue.h"
 #include <iostream>
 using namespace std;
 
 int main()
 {
-    Node *a = new Node(6);
-    Node *b = new Node(5);
-    a->setData(10);
-    a->setNext(b);
+    Queue q;
+    for (int i = 0; i < 10; i++)
+    {
+        q.enqueu(i);
+    }
 
-    cout << "Node *a: " << (a->getNext())->getData() << endl;
-    cout << "Node a: " << a->getData() << endl;
+    for (int j = 0; j < 10; j++)
+    {
+        cout << "removed: " << q.dequeue() << endl;
+    }
 }
