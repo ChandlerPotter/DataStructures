@@ -5,13 +5,15 @@
 //Node constructor
 Node::Node()
 {
-    next = NULL;
+    this->next = NULL;
+    this->data = 0;
 }
 
 //Node parameterized constructor
 Node::Node(int d)
 {
     this->data = d;
+    this->next = NULL;
 }
 
 //Node destructor
