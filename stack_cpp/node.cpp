@@ -24,32 +24,17 @@ Node::~Node()
 }
 
 //returns the data (int value) contained in the node
-int Node::getData()
-{
-    return this->data;
-}
+int Node::getData() { return this->data; }
 
 //sets the data (int value ) to be contained in the node
-void Node::setData(int d)
-{
-    this->data = d;
-}
+void Node::setData(int d) { this->data = d; }
 
 //returns a boolean value to determine if there is a node after this one.
 //Returns true if there is a next node, returns false otherwise.
-bool Node::isNext()
-{
-    return !(this->next == NULL);
-}
+bool Node::isNext() { return !(this->next == NULL); }
 
 //Takes a node pointer as an argument and sets that as the next node to the current one.
-void Node::setNext(Node *n)
-{
-    this->next = n;
-}
+void Node::setNext(Node *n) { this->next = n; }
 
 //Returns a node pointer to the next node.
-Node *Node::getNext()
-{
-    return this->next;
-}
+Node *Node::getNext() { return this->next; }
