@@ -1,18 +1,43 @@
 #include "node.h"
 #include "queue.h"
+#include <string.h>
 #include <iostream>
 using namespace std;
 
 int main()
 {
     Queue q;
-    for (int i = 0; i < 10; i++)
-    {
-        q.enqueu(i);
-    }
+    string data;
+    string out;
 
-    for (int j = 0; j < 10; j++)
+    cout << "Enter 'enqueue' or 'quit': " << endl;
+    cin >> data;
+    while (data != "quit")
     {
-        cout << "removed: " << q.dequeue() << endl;
+        if (data == "enqueue")
+        {
+            cout << "Enter 'dequeue', a number to enqueue, or 'quit' to exit: " << endl;
+            cin >> out;
+            if (out == "dequeue")
+            {
+                if (q.getLength() == 0)
+                {
+                    cout << "Queue is empty, cannot deuque" << endl;
+                }
+                else
+                {
+                    q.dequeue();
+                }
+            }
+            else if (out == "quit")
+            {
+                break;
+            }
+            else
+            {
+                q.enqueu(stoi(out));
+            }
+        }
     }
+    q.printQueue();
 }

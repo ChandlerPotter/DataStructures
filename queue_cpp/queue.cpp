@@ -21,6 +21,11 @@ Node *Queue::getHead()
     return this->head;
 }
 
+int Queue::getLength()
+{
+    return this->length;
+}
+
 bool Queue::isEmpty()
 {
     return (this->head == NULL);
@@ -40,6 +45,7 @@ void Queue::enqueu(int n)
         (this->tail)->setNext(other);
         this->tail = other;
     }
+    this->length = (this->length) + 1;
 }
 
 int Queue::dequeue()
@@ -56,6 +62,7 @@ int Queue::dequeue()
         {
             this->head = (this->head)->getNext();
         }
+        this->length = (this->length) - 1;
         return a;
     }
     else

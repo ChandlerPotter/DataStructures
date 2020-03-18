@@ -8,6 +8,7 @@ public:
     Queue();
     ~Queue();
     Node *getHead();
+    int getLength();
     void enqueu(int n);
     int dequeue();
     bool isEmpty();
@@ -16,6 +17,7 @@ public:
 private:
     Node *head;
     Node *tail;
+    int length;
 };
 
 #endif
