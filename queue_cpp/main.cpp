@@ -4,6 +4,8 @@
 #include <iostream>
 using namespace std;
 
+//This main program prompts the user to input commands for the program to perform various tasks on the queue.
+//Takes input via std in and produces output via std out.
 int main()
 {
     Queue q;
