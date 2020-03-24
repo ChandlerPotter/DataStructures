@@ -14,6 +14,8 @@ public:
     void deleteKey(int i);
     void minHeapify(int);
     void swap(int *x, int *y);
+    int extractMin();
+    void heapPrint();
 
 private:
     int size;
